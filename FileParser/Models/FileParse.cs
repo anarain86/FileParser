@@ -18,4 +18,13 @@ namespace FileParser.Models
         public string Section { get; set; }
         public string Content { get; set; }
     }
+
+    public class FileParse2
+    {
+        public string CaseNumber { get; set; }
+        public string Date { get; set; }
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public string Content { get; set; }
+    }
 }

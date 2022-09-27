@@ -122,5 +122,27 @@ namespace FileParser.Extension
 
             return sb.ToString()[start..end];
         }
+
+        /// <summary>
+        /// Prepend - Add string at the top of the StringBuilder
+        /// </summary>
+        /// <param name="sb">Stringbuilder object itself</param>
+        /// <param name="content">The content that you want to add at the beginning</param>
+        /// <returns></returns>
+        public static StringBuilder Prepend(this StringBuilder sb, string content)
+        {
+            return sb.Insert(0, content);
+        }
+
+        /// <summary>
+        /// PrependLine - Add string at the top of the StringBuilder with the include Environment.Newline
+        /// </summary>
+        /// <param name="sb">Stringbuilder object itself</param>
+        /// <param name="content">The content that you want to add at the beginning</param>
+        /// <returns></returns>
+        public static StringBuilder PrependLine(this StringBuilder sb, string content)
+        {
+            return sb.Insert(0, content + Environment.NewLine);
+        }
     }
 }
